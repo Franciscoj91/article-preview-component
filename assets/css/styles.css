@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+  --bg-primary: #ECF2F8;
+  --white: #FFF;
+  --titles-color: #48556A;
+  --text-color: #6E8098;
+  --secondary-text-color: #9DAEC2;
+  --shadow-color: #c9d5e180;
+}
+
+h2, p{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.008rem;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.card {
+  width: 327px;
+  height: 512px;
+  border-radius: 10px;
+  box-shadow: 0 40px 40px -10px var(--shadow-color);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img, .card-img img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.content{
+  padding:36px 32px 20px;
+}
+
+.content h2{
+  font-size: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+  font-weight: 700;
+  color: var(--titles-color);
+  letter-spacing: 0.2px;
+  line-height: 24px;
+}
+
+.content>p {
+  margin-top: 12px;
+  
+}
+
+.card-footer{
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.author-img, .author-img img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-info p:first-child{
+  color: var(--titles-color);
+  font-weight: 700;
+}
+.author-info p:last-child{
+  color: var(--secondary-text-color);
+}
+
+.share-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: var(--bg-primary);
+  border: 0;
+  padding: 0;
+}
+
+.share-btn svg{
+  fill: var(--text-color)
+}
+
+.share-btn:hover{
+  background-color: var(--text-color);
+}
+
+.share-btn:hover svg{
+  fill: var(--white);
+}
+
+.share-section{
+  display: none;
+}
+
+@media (min-width:75rem) {
+  .card {
+    width: 730px;
+    height: 280px;
+    flex-direction: row;
+  }
+
+  .card-img, .card-img img{
+    width: 285px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .content{
+    padding: 32px 40px;
+  }
+
+  .card-footer{
+    margin-top: 20px;
+  }
+}
